@@ -20,9 +20,9 @@ makeCacheMatrix <- function(x = matrix()){
     list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
-## cacheSolve returns the value of the inverse, if the inverse has already been
-## computed. If not, the function computes the inverse, caches its value via 
-## the setInverse function, and returns the value of the inverse.
+## If the inverse has already been computed, cacheSolve returns the value 
+## of the inverse. If not, the function computes the inverse, caches its 
+## value via the setInverse function, and returns the value of the inverse.
 
 cacheSolve <- function(x, ...) {
     i <- x$getInverse()
